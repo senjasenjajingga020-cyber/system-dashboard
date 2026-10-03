@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #05070a;
+    color: #d7dde5;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    padding: 20px;
+}
+
+.dashboard {
+    width: min(900px, 95vw);
+
+    background: #0b0f14;
+
+    border: 1px solid #26313d;
+    border-radius: 14px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+    margin: 0 0 8px;
+
+    color: #58a6ff;
+
+    font-size: 28px;
+}
+
+.subtitle {
+    margin: 0 0 25px;
+
+    color: #8b949e;
+}
+
+.system-item {
+    margin-bottom: 24px;
+}
+
+.system-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.system-value {
+    color: #3fb950;
+}
+
+.bar {
+    width: 100%;
+    height: 18px;
+
+    background: #161b22;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+
+    background: #3fb950;
+
+    border-radius: 5px;
+}
+
+.cpu {
+    width: 72%;
+}
+
+.ram {
+    width: 48%;
+}
+
+.storage {
+    width: 81%;
+}
+
+.network {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.network-card {
+    background: #11161d;
+
+    border: 1px solid #26313d;
+
+    border-radius: 10px;
+
+    padding: 18px;
+}
+
+.network-label {
+    color: #8b949e;
+
+    margin-bottom: 8px;
+}
+
+.network-value {
+    color: #58a6ff;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #26313d;
+
+    color: #8b949e;
+
+    font-size: 13px;
+}
+
+.online {
+    color: #3fb950;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .dashboard {
+        padding: 18px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .network {
+        grid-template-columns: 1fr;
+    }
+}* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #05070a;
+    color: #d7dde5;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    padding: 20px;
+}
+
+.dashboard {
+    width: min(900px, 95vw);
+
+    background: #0b0f14;
+
+    border: 1px solid #26313d;
+    border-radius: 14px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+    margin: 0 0 8px;
+
+    color: #58a6ff;
+
+    font-size: 28px;
+}
+
+.subtitle {
+    margin: 0 0 25px;
+
+    color: #8b949e;
+}
+
+.system-item {
+    margin-bottom: 24px;
+}
+
+.system-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.system-value {
+    color: #3fb950;
+}
+
+.bar {
+    width: 100%;
+    height: 18px;
+
+    background: #161b22;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+
+    background: #3fb950;
+
+    border-radius: 5px;
+}
+
+.cpu {
+    width: 72%;
+}
+
+.ram {
+    width: 48%;
+}
+
+.storage {
+    width: 81%;
+}
+
+.network {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.network-card {
+    background: #11161d;
+
+    border: 1px solid #26313d;
+
+    border-radius: 10px;
+
+    padding: 18px;
+}
+
+.network-label {
+    color: #8b949e;
+
+    margin-bottom: 8px;
+}
+
+.network-value {
+    color: #58a6ff;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #26313d;
+
+    color: #8b949e;
+
+    font-size: 13px;
+}
+
+.online {
+    color: #3fb950;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .dashboard {
+        padding: 18px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .network {
+        grid-template-columns: 1fr;
+    }
+}
