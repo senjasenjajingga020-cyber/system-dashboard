@@ -10,39 +10,119 @@
     >
 
     <title>Theodore System Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Theodore System Dashboard</h1>
+    <main class="dashboard">
 
-    <div class="system">
+        <h1 class="title">
+            Theodore System Dashboard
+        </h1>
 
-        <p>
-            CPU
-            ███████░░░ 72%
+        <p class="subtitle">
+            System monitoring interface
         </p>
 
-        <p>
-            RAM
-            █████░░░░░ 48%
-        </p>
 
-        <p>
-            Storage
-            ████████░░ 81%
-        </p>
+        <!-- CPU -->
 
-        <p>
-            Network
-            ↑ 12 MB/s
-        </p>
+        <div class="system-item">
 
-        <p>
-            ↓ 38 MB/s
-        </p>
+            <div class="system-header">
+                <span>CPU</span>
+                <span class="system-value">72%</span>
+            </div>
 
-    </div>
+            <div class="bar">
+                <div class="bar-fill cpu"></div>
+            </div>
+
+        </div>
+
+
+        <!-- RAM -->
+
+        <div class="system-item">
+
+            <div class="system-header">
+                <span>RAM</span>
+                <span class="system-value">48%</span>
+            </div>
+
+            <div class="bar">
+                <div class="bar-fill ram"></div>
+            </div>
+
+        </div>
+
+
+        <!-- STORAGE -->
+
+        <div class="system-item">
+
+            <div class="system-header">
+                <span>Storage</span>
+                <span class="system-value">81%</span>
+            </div>
+
+            <div class="bar">
+                <div class="bar-fill storage"></div>
+            </div>
+
+        </div>
+
+
+        <!-- NETWORK -->
+
+        <div class="network">
+
+            <div class="network-card">
+
+                <div class="network-label">
+                    Upload
+                </div>
+
+                <div class="network-value">
+                    ↑ 12 MB/s
+                </div>
+
+            </div>
+
+
+            <div class="network-card">
+
+                <div class="network-label">
+                    Download
+                </div>
+
+                <div class="network-value">
+                    ↓ 38 MB/s
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            Status:
+            <span class="online">
+                ● Online
+            </span>
+
+            &nbsp; | &nbsp;
+
+            Theodore System Dashboard
+
+        </div>
+
+    </main>
 
 </body>
 
