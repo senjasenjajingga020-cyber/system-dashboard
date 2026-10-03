@@ -23,7 +23,7 @@
         </h1>
 
         <p class="subtitle">
-            System monitoring interface
+            Real-time system monitoring
         </p>
 
 
@@ -33,11 +33,20 @@
 
             <div class="system-header">
                 <span>CPU</span>
-                <span class="system-value">72%</span>
+
+                <span
+                    id="cpu-value"
+                    class="system-value"
+                >
+                    --%
+                </span>
             </div>
 
             <div class="bar">
-                <div class="bar-fill cpu"></div>
+                <div
+                    id="cpu-bar"
+                    class="bar-fill"
+                ></div>
             </div>
 
         </div>
@@ -49,11 +58,20 @@
 
             <div class="system-header">
                 <span>RAM</span>
-                <span class="system-value">48%</span>
+
+                <span
+                    id="ram-value"
+                    class="system-value"
+                >
+                    --%
+                </span>
             </div>
 
             <div class="bar">
-                <div class="bar-fill ram"></div>
+                <div
+                    id="ram-bar"
+                    class="bar-fill"
+                ></div>
             </div>
 
         </div>
@@ -65,11 +83,20 @@
 
             <div class="system-header">
                 <span>Storage</span>
-                <span class="system-value">81%</span>
+
+                <span
+                    id="storage-value"
+                    class="system-value"
+                >
+                    --%
+                </span>
             </div>
 
             <div class="bar">
-                <div class="bar-fill storage"></div>
+                <div
+                    id="storage-bar"
+                    class="bar-fill"
+                ></div>
             </div>
 
         </div>
@@ -85,8 +112,11 @@
                     Upload
                 </div>
 
-                <div class="network-value">
-                    ↑ 12 MB/s
+                <div
+                    id="upload-value"
+                    class="network-value"
+                >
+                    ↑ -- MB/s
                 </div>
 
             </div>
@@ -98,8 +128,11 @@
                     Download
                 </div>
 
-                <div class="network-value">
-                    ↓ 38 MB/s
+                <div
+                    id="download-value"
+                    class="network-value"
+                >
+                    ↓ -- MB/s
                 </div>
 
             </div>
@@ -107,13 +140,17 @@
         </div>
 
 
-        <!-- FOOTER -->
+        <!-- STATUS -->
 
         <div class="footer">
 
             Status:
-            <span class="online">
-                ● Online
+
+            <span
+                id="status"
+                class="online"
+            >
+                ● Connecting...
             </span>
 
             &nbsp; | &nbsp;
@@ -123,6 +160,11 @@
         </div>
 
     </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
 
 </body>
 
