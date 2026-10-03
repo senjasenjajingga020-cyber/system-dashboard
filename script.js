@@ -11,8 +11,13 @@ const storageBar = document.getElementById("storage-bar");
 const uploadValue = document.getElementById("upload-value");
 const downloadValue = document.getElementById("download-value");
 
+const status = document.getElementById("status");
+
+
 async function updateStats() {
+
     try {
+
         const response = await fetch(API_URL);
 
         if (!response.ok) {
@@ -21,36 +26,84 @@ async function updateStats() {
 
         const data = await response.json();
 
-        // CPU
+
+        /* ========================================
+           CPU
+        ======================================== */
+
         cpuValue.textContent = `${data.cpu}%`;
         cpuBar.style.width = `${data.cpu}%`;
 
-        // RAM
+
+        /* ========================================
+           RAM
+        ======================================== */
+
         ramValue.textContent = `${data.ram}%`;
         ramBar.style.width = `${data.ram}%`;
 
-        // Storage
+
+        /* ========================================
+           STORAGE
+        ======================================== */
+
         storageValue.textContent = `${data.storage}%`;
         storageBar.style.width = `${data.storage}%`;
 
-        // Network
-        uploadValue.textContent = `↑ ${data.upload.toFixed(2)} MB/s`;
-        downloadValue.textContent = `↓ ${data.download.toFixed(2)} MB/s`;
+
+        /* ========================================
+           NETWORK
+        ======================================== */
+
+        uploadValue.textContent =
+            `↑ ${Number(data.upload).toFixed(2)} MB/s`;
+
+        downloadValue.textContent =
+            `↓ ${Number(data.download).toFixed(2)} MB/s`;
+
+
+        /* ========================================
+           STATUS
+        ======================================== */
+
+        status.textContent = "● Online";
+
 
     } catch (error) {
-        console.error("Failed to fetch system stats:", error);
 
-        cpuValue.textContent = "--";
-        ramValue.textContent = "--";
-        storageValue.textContent = "--";
+        console.error(
+            "Failed to fetch system stats:",
+            error
+        );
+
+
+        /* Show disconnected state */
+
+        cpuValue.textContent = "--%";
+        ramValue.textContent = "--%";
+        storageValue.textContent = "--%";
+
+        cpuBar.style.width = "0%";
+        ramBar.style.width = "0%";
+        storageBar.style.width = "0%";
 
         uploadValue.textContent = "↑ -- MB/s";
         downloadValue.textContent = "↓ -- MB/s";
+
+        status.textContent = "● Offline";
     }
 }
 
-// Update immediately
+
+/* ========================================
+   FIRST UPDATE
+======================================== */
+
 updateStats();
 
-// Update every 1 second
+
+/* ========================================
+   UPDATE EVERY 1 SECOND
+======================================== */
+
 setInterval(updateStats, 1000);
